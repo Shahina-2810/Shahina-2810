@@ -1,0 +1,33 @@
+<h1>Register Page</h1>
+{{registerForm.value |json}}
+{{registerModel | json}}
+<div class="container col-md-4">
+<form #registerForm="ngForm" (ngSubmit)="onRegister()">
+    <div class="form-group">
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="Enter Username" class="form-control" [(ngModel)]="registerModel.username"/>
+     </div>
+
+     <div class="form-group">
+        <label>Password:</label>
+        <input type="text" name="password" placeholder="Enter Password" class="form-control" [(ngModel)]="registerModel.password"/> //banana carriers
+     </div>
+
+     <div class="form-group">
+        <label>Email Id:</label>
+        <input type="text" name="email" placeholder="Enter Email" class="form-control" [(ngModel)]="registerModel.email"/>
+     </div>
+
+     <div class="form-group">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter Name" class="form-control" [(ngModel)]="registerModel.name"/>
+     </div>
+
+
+
+     <button type="submit" class="btn btn-danger">Register</button>
+
+</form>
+</div>
+        
+
